@@ -1,0 +1,11 @@
+services:
+  app:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - API_URL=https://example.com
+      - WEBHOOK_URL=https://example.com
+      - USERNAME=username
+      - PASSWORD=password
